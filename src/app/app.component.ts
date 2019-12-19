@@ -91,8 +91,10 @@ app.ticker.add((delta) => {
 })
 }
 ngInitOn() {
-  cshbotFunc();
+  //cshbotFunc();
 
-testFunc();
+//testFunc();
+
+console = console;
 } 
 }
