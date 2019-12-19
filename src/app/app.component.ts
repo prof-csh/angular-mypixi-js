@@ -8,10 +8,19 @@ import { Component } from '@angular/core';
 export class AppComponent  {
   name = 'Angular';
 
+  testFunc()  {
+      console.log("Hello from beginning of testFunc()");
+
+  }
+
+cshbotFunc() {
+
   document.body.appendChild(app.view);
+  
+  console.log("Hello from beginning of cshbotFunc()");
 
 // Get the texture for rope.
-const starTexture = PIXI.Texture.from('examples/assets/star.png');
+const starTexture = PIXI.Texture.from('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQJbDbuj2utIA0WMx71GeWHsKqLVlAmtAj6xWnsNjW8DoG0goYB&s');
 
 const starAmount = 1000;
 let cameraZ = 0;
@@ -79,5 +88,11 @@ app.ticker.add((delta) => {
         star.sprite.scale.y = distanceScale * starBaseSize + distanceScale * speed * starStretch * distanceCenter / app.renderer.screen.width;
         star.sprite.rotation = Math.atan2(dyCenter, dxCenter) + Math.PI / 2;
     }
-});
+})
+}
+ngInitOn() {
+  cshbotFunc();
+
+testFunc();
+} 
 }
